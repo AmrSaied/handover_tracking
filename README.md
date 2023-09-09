@@ -24,9 +24,9 @@ This Flutter mobile app is a part of the Handover project, a last-mile delivery 
 
 ## Screenshots
 
-![Screenshot 1](https://ibb.co/p1CyFCn)
-![Screenshot 2](https://ibb.co/M7q6SGv)
-![Screenshot 3](https://ibb.co/fQxMPxy)
+![Screenshot 1](https://i.ibb.co/9pRt5RG/screenshot-1694296250814.png)
+![Screenshot 2](https://i.ibb.co/PgBQj9L/screenshot-1694296167858.png)
+![Screenshot 3](https://i.ibb.co/hCmstm4/screenshot-1694296137720.png)
 
 ## Getting Started
 
