@@ -60,8 +60,11 @@ These instructions will help you set up and run the project on your local machin
 
 ## Dependencies
 .Flutter: The app is built using the Flutter framework.
+
 .GetX: Used for state management and navigation.
+
 .Geolocator: For location tracking.
+
 .flutter_local_notifications: For sending notifications.
 
 ## Contributing
@@ -69,9 +72,13 @@ These instructions will help you set up and run the project on your local machin
 If you'd like to contribute to this project, please follow these guidelines:
 
 1-Fork the repository.
+
 2-Create a new branch for your feature or bug fix.
+
 3-Make your changes and ensure they are well-documented.
+
 4-Test your changes thoroughly.
+
 5-Create a pull request with a detailed description of your changes.
 
 ## License
