@@ -1,16 +1,80 @@
-# handover_tacking_task
+# Handover Tracking App
 
-A new Flutter project.
+## Overview
+
+This Flutter mobile app is a part of the Handover project, a last-mile delivery service that allows users to track the delivery of their packages in real-time. This README provides an overview of the project, instructions for running the app, and key features.
+
+## Table of Contents
+
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Dependencies](#dependencies)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+
+- **Live Tracking**: Users can track the driver's real-time location on a map.
+- **Background Tracking**: The app continues tracking the driver's location even when in the background.
+- **Notifications**: Users receive notifications when the driver is near the pickup and delivery destinations.
+- **Rating**: After delivery completion, users can rate the delivery.
+
+## Screenshots
+
+![Screenshot 1](https://ibb.co/p1CyFCn)
+![Screenshot 2](https://ibb.co/M7q6SGv)
+![Screenshot 3](https://ibb.co/fQxMPxy)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+These instructions will help you set up and run the project on your local machine.
 
-A few resources to get you started if this is your first Flutter project:
+### Installation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. Clone the repository to your local machine:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+   ```bash
+   git clone https://github.com/YourUsername/handover_tracking.git
+
+2.Change directory to the project folder:
+
+    ```bash
+    cd handover_tracking
+
+3- Install the dependencies:
+
+    ```bash
+    flutter pub get
+
+### Usage
+
+1.Run the app on your preferred Flutter-compatible emulator or physical device:
+
+    ```bash
+    flutter run
+
+2.Follow the on-screen instructions to simulate the driver's movement and track the delivery.
+
+## Dependencies
+.Flutter: The app is built using the Flutter framework.
+.GetX: Used for state management and navigation.
+.Geolocator: For location tracking.
+.flutter_local_notifications: For sending notifications.
+
+## Contributing
+
+If you'd like to contribute to this project, please follow these guidelines:
+
+1-Fork the repository.
+2-Create a new branch for your feature or bug fix.
+3-Make your changes and ensure they are well-documented.
+4-Test your changes thoroughly.
+5-Create a pull request with a detailed description of your changes.
+
+## License
+This project is licensed under the MIT License.
+
+
