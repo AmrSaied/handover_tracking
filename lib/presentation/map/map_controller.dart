@@ -8,8 +8,12 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:handover_tacking_task/core/constants.dart';
 import 'package:handover_tacking_task/core/services/notification_service.dart';
 
-class MapController extends GetxController {
+class MapController extends GetxController
+    with GetSingleTickerProviderStateMixin {
   final NotificationService _notificationService;
+  late AnimationController animationController;
+  late Tween<Offset> offsetAnimation;
+
 
   MapController(this._notificationService);
 
@@ -184,6 +188,14 @@ class MapController extends GetxController {
   @override
   void onInit() async {
     super.onInit();
+    animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 300),
+    )..forward();
+    offsetAnimation = Tween<Offset>(
+      begin: const Offset(0,.5),
+      end: Offset.zero,
+    );
     initialCameraPosition = CameraPosition(
       target: deliveryLatLng.value,
       zoom: 8.0,
@@ -206,11 +218,13 @@ class MapController extends GetxController {
   ) async {
     driverOnWay(true);
     _timer = Timer.periodic(const Duration(milliseconds: 500), (timer) async {
-      final polyline = polyLines[const PolylineId('1')]!;
-      if (polyline.points.isEmpty && showTripPolyLine.isFalse) {
+      final polyline = polyLines[const PolylineId('1')];
+      if(polyline == null)return;
+        if (polyline.points.isEmpty && showTripPolyLine.isFalse) {
         timer.cancel();
         return;
       }
+      if(polyline.points.isEmpty)return;
       polyline.points.removeAt(0);
       final newLocation = polyLines[const PolylineId('1')]!.points.firstOrNull;
       if (coordinates.length > 1) {
@@ -322,6 +336,7 @@ class MapController extends GetxController {
   void onClose() {
     _timer.cancel();
     mapController?.dispose();
+    animationController.dispose();
     super.onClose();
   }
 }

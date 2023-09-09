@@ -51,9 +51,14 @@ class MapScreen extends GetView<MapController> {
               height: controller.confirmRate.isTrue ? 0 : null,
               child: Opacity(
                 opacity: controller.confirmRate.isTrue ? 0 : 1,
-                child: (controller.destinationReached.isTrue)
-                    ? const DeliveredSuccessDialog()
-                    : const DeliveryRequestDialog(),
+                child: SlideTransition(
+                  position: controller.offsetAnimation.animate(CurvedAnimation(
+                      parent: controller.animationController,
+                      curve: Curves.easeIn)),
+                  child: (controller.destinationReached.isTrue)
+                      ? const DeliveredSuccessDialog()
+                      : const DeliveryRequestDialog(),
+                ),
               ),
             ),
           )
